@@ -37,7 +37,7 @@ Route::resource('employee', EmployeeController::class)->middleware('auth');
 Route::resource('process', ProcessController::class)->middleware('auth');
 Route::resource('relations', RelationsController::class)->middleware('auth');
 
-Auth::routes(['register'=>false,'reset'=>false]);
+Auth::routes(['reset'=>false]);
 Route::get('/home', [ProcessController::class, 'index'])->name('home');
 Route::group(['Middleware' => 'auth'],function() {
    
